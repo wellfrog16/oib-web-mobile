@@ -32,7 +32,7 @@ define([
             })
 
             $('.nav .close').on('click', function(){
-                $('.nav').animate({ 'right': '-250px' });
+                $('.nav').animate({ 'right': '-100vw' });
             })
         }
 

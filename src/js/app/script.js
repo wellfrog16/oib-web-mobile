@@ -26,8 +26,7 @@ define(['jquery', 'web', 'swiper', 'bootstrap', 'i18n!./nls/message'], function 
             paginationClickable: true,
             autoplayDisableOnInteraction: false,
             speed: 1500,
-            //width: '100%',
-            width: $('body').width() < 1440 ? 1440 : $('body').width(),
+            //width: $('body').width(),
 
             // 如果需要分页器
             pagination: '.swiper-pagination',

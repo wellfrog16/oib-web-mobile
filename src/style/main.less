@@ -34,48 +34,55 @@ html, body {
 
 // ------------------------------------框架-----------------------------------------
 
+@padding: 20px;
+
 .wrapper {
     //max-width: @web-width;
-    min-width: @web-width;
+    //min-width: @web-width;
     width: 100%;
     margin: 0 auto;
 }
 
 .box-padding {
-    padding: 0 30px;
+    padding: 0 @padding;
 }
 
 
 // ------------------------------------header-----------------------------------------
 
 .header-margin(){
-    padding-top: 58px;
+    padding-top: 80px;
 }
 
 .header {
     position: fixed;
     top: 0;
     z-index: 88;
-    height: 58px;
     background-color: #FFF;
 
     @margin-top: 15px;
+
+    .row {
+        padding: 0 @padding;
+        height: 48px;
+    }
     
     // logo
     .logo {
-        margin-top: @margin-top;
+        margin-top: @margin-top + 3px;
+        width: 100%;
     }
 
-    #nav-toggle {
+    .corner {
         text-align: right;
 
-        div {
+        .language {
             display: inline-block;
-            font-size: 18px;
+            font-size: 14px;
             color: @main-color;
             position: relative;
-            top: -2px;
-            margin-right: 20px;
+            top: -3px;
+            margin-right: 16px;
 
             span {
                 position: relative;
@@ -91,58 +98,77 @@ html, body {
 
     // 导航按钮
     .nav-toggle {        
-        margin-top: @margin-top + 3px;
+        margin-top: @margin-top;
         cursor: pointer;
     }
 }
 
 #page-name {
     text-align: center;
-    line-height: 58px;
+    line-height: 30px;
     font-weight: bold;
     color: @main-color;
-    letter-spacing: 10px;
-    font-size: 18px;
+    letter-spacing: 8px;
+    font-size: 16px;
+    border-top: 1px solid @main-color;
+    border-bottom: 1px solid @main-color;
     // 修正letter-spacing位移
-    position: relative;
-    left: 5px;
+    // position: relative;
+    // left: 5px;
+    &:before {
+        content: ' ';
+        margin-right: 10px;
+    }
 }
 
 // ------------------------------------footer-----------------------------------------
 
 .footer {
-    height: 330px;
+    //height: 430px;
     background-color: @main-color;    
 
     h3 {
         color: #FFF;
         height: 80px;
-        font-size: 15px;
+        font-size: 14px;
         line-height: 80px;
     }
 
     .row {
-        margin-bottom: 30px;
+        margin-bottom: 20px;
+    }
+
+    .links img {
+        width: 50%;
+    }
+
+    .contacts {
+        margin-top: -20px;
     }
 
     .email {
         color: #FFF;
-        font-size: 20px;
-        font-weight: bold;
+        font-size: 16px;
     }
 
     .line {
+        margin-top: 12px;
         border-top: 1px solid #FFF;
         //height: 20px;
         padding-top: 12px;
     }
 
     ul.share {
-        text-align: right;
+        //text-align: right;
+        margin: 20px 0 15px 0;
 
         li { 
             display: inline-block; 
-            margin-left: 10px;
+            margin-right: 24px;
+
+            img {
+                width: 30px;
+            }
         }
     }
 
@@ -158,30 +184,33 @@ html, body {
 .nav {
     position: fixed;
     top: 0;
-    background-color: #fff;
+    background-color: #f3f3f3;
     height: 100vh;
-    width: 250px;
-    right: -250px;
-    //right: 0;
+    width: 100vw;
+    right: -100vw;
+    padding: @padding;
     z-index: 99;
     
     .close {
-        margin: 36px 0 36px 80%;
+        position: absolute;
+        top: @padding;
+        right: @padding;
         cursor: pointer;
     }
 
     @border-color:#eaa7a2;
-    @padding-left:30px;
+    @padding-left:20px;
 
     ul.link {
+        margin-top: 22px + @padding;
         border-top: 1px solid @border-color;
         li a {
             display: block;
             border-bottom: 1px solid @border-color;
-            height: 73px;
-            line-height: 73px;
+            height: 50px;
+            line-height: 50px;
             padding-left: @padding-left;
-            font-size: 20px;
+            font-size: 16px;
             color: @main-color;
             font-weight: lighter;
 
@@ -195,7 +224,6 @@ html, body {
     ul.share {
         position: absolute;
         bottom: 50px;
-        padding-left: @padding-left;
 
         li { 
             display: inline-block; 
@@ -206,7 +234,6 @@ html, body {
     .copyright {
         position: absolute;
         bottom: 20px;
-        padding-left: @padding-left;
         color: @main-color;
         font-size: 10px;
     }
@@ -217,9 +244,9 @@ html, body {
     color:@main-color;
 
     h3 {
-        margin-bottom: 36px;
+        margin-bottom: 20px;
         font-weight: normal;
-        font-size: 14px;
+        font-size: 16px;
 
         span {
             font-weight: bold;
@@ -227,6 +254,8 @@ html, body {
     }
 
     h4 {
+        font-weight: normal;
+        font-size: 16px;
         width: 80%;
         padding-bottom: 12px;
         border-bottom: 2px solid @main-color;        
@@ -248,7 +277,8 @@ html, body {
 
         // logo
         .logo {
-            margin-top: @margin-top;
+            width: 100%;
+            margin-top: @margin-top + 3px;
         }
 
         // 导航按钮
@@ -378,8 +408,8 @@ html, body {
     .header-margin();
 
     .main {
-        padding-top: 58px;
-        padding-bottom: 50px;
+        padding-top: 25px;
+        padding-bottom: 25px;
     }
 }
 
@@ -389,7 +419,8 @@ html, body {
 
 
 .detail {
-    padding: 0 20px;
+    //padding: 0 20px;
+    margin-top: 30px;
     line-height: 24px;
 
     .date {
@@ -490,45 +521,59 @@ html, body {
     .header-margin();
 
     .text {
-        margin: 58px 0;
+        margin: 30px 0;
+
+        img { width: 100%; }
     }
 
     .kv {
-        height: 990px;
         background-color: @main-color;
         padding-top: 30px;
         padding-bottom: 30px;
         color: #FFF;
 
+        h4 {
+            font-size: 12px;
+        }
+
         span {
             display: block;
-            font-size: 40px;
+            font-size: 24px;
             font-weight: bold;
-            margin: 18px auto 12px auto;
+            margin: 10px auto 4px auto;
         }
 
         a{
+            font-size: 10px;
             color: #FFF;
             text-decoration: underline;
         }
     }
 
     .logo {
-        margin-top: 80px;
-        background-image: url('../asset/img/about/logo.png');
-        background-position: center;
-        background-repeat: no-repeat;
-        height: 700px;
+        //margin-top: 80px;
+        // background-image: url('../asset/img/about/logo.png');
+        // background-position: center;
+        // background-repeat: no-repeat;
+        // background-size: 80%;
+        //height: 400px;
+        text-align: center;
+        padding: 50px 0;
+
+        img {
+            width: 80%;
+        }
+
     }
 
     .list {
         li {
             h3 {
-                height: 125px;
-                line-height: 125px;
+                height: 60px;
+                line-height: 60px;
                 color: @main-color;
                 font-weight: bold;
-                font-size: 30px;
+                font-size: 20px;
                 text-align: center;
                 background-color: #FFF;
                 border-top: 1px solid @main-color;
@@ -544,7 +589,7 @@ html, body {
 
 
             >div {
-                width: 66.66666667%;
+                //width: 66.66666667%;
                 margin: 0 auto;
                 padding: 20px 20px 50px 20px;
                 color: #000;
@@ -786,13 +831,14 @@ html, body {
 
 .other {
     text-align: center;
-    margin: 50px auto 100px auto;
+    margin: 50px auto 50px auto;
     font-size: 0;
 
     li {
-        display: inline-block;
-        width: 24%;
-        margin: 0 0.5%;
+        //display: inline-block;
+        //width: 24%;
+        //margin: 0 0.5%;
+        margin-bottom: 15px;
 
         img {
             width: 100%;
@@ -890,10 +936,10 @@ html, body {
 }
 
 .swiper-button-next, .swiper-button-prev {
-    width:29px !important;
-    height:58px !important;
-    margin-top:-29px !important;
-    background-size:29px 58px !important;
+    width:14.5px !important;
+    height:29px !important;
+    margin-top:-14.5px !important;
+    background-size:14.5px 29px !important;
  }
 
 .swiper-pagination-bullet {
@@ -907,7 +953,7 @@ html, body {
 
 
 .swiper-pagination {
-    bottom:56px !important;
+    bottom:10px !important;
 
     span {
         margin:0 4.5454% !important;
