@@ -1,6 +1,6 @@
 // 剧本
 
-define(['jquery', 'web', 'swiper', 'bootstrap', 'i18n!./nls/message'], function ($, web, swiper, bootstrap, i18n) {
+define(['jquery', 'web', 'swiper', 'bootstrap', 'i18n!./nls/message', 'jquery.pin', 'jquery.nav'], function ($, web, swiper, bootstrap, i18n) {
     var self = {}
 
     self.open = function () {
@@ -56,11 +56,8 @@ define(['jquery', 'web', 'swiper', 'bootstrap', 'i18n!./nls/message'], function 
 
         // service
         $('.service .category .item')
-            .on('mouseenter', function(){
-                $(this).addClass('hover');
-            })
-            .on('mouseleave', function(){
-                $(this).removeClass('hover');
+            .on('click', function(){
+                //$(this).toggleClass('hover, active');
             });
 
         $('.service .category .letter').on('click', function(){
@@ -77,6 +74,12 @@ define(['jquery', 'web', 'swiper', 'bootstrap', 'i18n!./nls/message'], function 
             $('.service .category .item').removeClass('active hover');
             $(this).addClass('active');
         })
+
+        $('.nav-letter').pin({containerSelector: '.result-letter', padding: {top: 80}});
+
+        $('.right-col').onePageNav({
+            offset: -80
+        });
     }
 
     self.loadhtml = function() {

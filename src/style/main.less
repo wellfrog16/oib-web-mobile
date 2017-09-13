@@ -256,7 +256,7 @@ html, body {
     h4 {
         font-weight: normal;
         font-size: 16px;
-        width: 80%;
+        //width: 80%;
         padding-bottom: 12px;
         border-bottom: 2px solid @main-color;        
     }
@@ -446,22 +446,28 @@ html, body {
     //font-size: 0px;
 
     .list {
+        margin-top: -1px;
         border-bottom: 1px solid @main-color;
 
         li a {
             border-top: 1px solid @main-color;
             display: block;
-            height: 200px;
+            height: 100px;
             background-color: #fff;
             color: @main-color;
-            font-size: 16px;
-            transition: all 0.3s ease-in-out; 
+            font-size: 14px;
+            padding: 0 @padding;
+            //transition: all 0.3s ease-in-out; 
+
+            h3 {
+                font-size: 14px;
+            }
 
             span {
                 display: inline-block;
-                margin-top: 20px;
-                opacity: 0;
-                transition: all 0.3s ease-in-out; 
+                margin-top: 10px;
+                //opacity: 0;
+                //transition: all 0.3s ease-in-out; 
                 color: @main-color;
             }
 
@@ -591,7 +597,7 @@ html, body {
             >div {
                 //width: 66.66666667%;
                 margin: 0 auto;
-                padding: 20px 20px 50px 20px;
+                padding: 20px 20px 20px 20px;
                 color: #000;
                 font-size: 14px;
                 line-height: 24px;
@@ -602,15 +608,19 @@ html, body {
 
     .people {
 
+        .row {
+            margin-bottom: 20px;
+        }
+
         .photo {
-            padding: 20px;
+            //padding: 20px;
             img {
                 width: 100%;
             }
         }
 
         .info {
-            padding: 20px;
+            //padding: 20px;
             padding-top: 17px;  // 修复偏差，顶部对齐
 
             h4 {
@@ -637,20 +647,21 @@ html, body {
 
             >li {
                 display: inline-block;
-                height: 105px;
-                line-height: 105px;
+                height: 50px;
+                line-height: 50px;
                 color: @main-color;
                 width: 33.3333333%;
-                font-size: 24px;
+                font-size: 18px;
                 text-align: center;
                 border-left: 1px solid @main-color;
                 border-bottom: 1px solid @main-color;
-                position: relative;
+                //position: relative;
                 cursor: pointer;
 
                 // 二级选择
                 ol {
                     position: absolute;
+                    left: 0;
                     width: 100%;
                     display: none;
                     z-index: 1;
@@ -675,14 +686,15 @@ html, body {
 
                 span {
                     display: inline-block;
-                    height: 14px;
-                    width: 27px;
+                    height: 7px;
+                    width: 13.5px;
                     background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAcCAYAAACQ0cTtAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MDdCOTlBMjA5MUYzMTFFNzlDMkZEMzk5RTM3NkRCRDEiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MDdCOTlBMjE5MUYzMTFFNzlDMkZEMzk5RTM3NkRCRDEiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDowN0I5OUExRTkxRjMxMUU3OUMyRkQzOTlFMzc2REJEMSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDowN0I5OUExRjkxRjMxMUU3OUMyRkQzOTlFMzc2REJEMSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pj2euOgAAAC5SURBVHjatJPbDYAgDEWJY5g4Avu4h1O5AoOwgINgSdAPFenj1qQJansOgTYcy5woYnB8Kr96JlpvFLuXsHH35rnNGS3sctHCIQ8lZHOsQnG9VqjeqLTQfAVcAKy5RiD42PSAXvP5AruJPoSrqwhydKWURBEpgmNUfroW2VF4818fvET1vfsDLXrKkMJPDjvRKurJLMLfOnWhJt8MkOQhdsw+AetdiI7acvniJtK29arpVugcjeIUYAA3IPp/NXvwYgAAAABJRU5ErkJggg==');
                     background-repeat: no-repeat;
+                    background-size: 100%;
                     background-position: 0 0;
-                    position: absolute;
-                    right: 30px;
-                    top: 47px;
+                    position: relative;
+                    left: 8px;
+                    //top: 24px;
                 }
 
                 &.letter {
@@ -694,11 +706,11 @@ html, body {
                     color: #FFF;
 
                     span {
-                        background-position: 0 -14px;
+                        background-position: 0 -7px;
                     }
                 }
 
-                &.hover {
+                &.active, &.hover {
                     ol {
                         display: block;
                     }
@@ -707,24 +719,47 @@ html, body {
         }
 
         .result-letter {
-            min-height: 800px;
+            
+            .left-col {
+                float: left;
+                width: 90%;
+            }
+
+            .right-col {
+                float: right;
+            }
+            
 
             .nav-letter {
+                //position: absolute;
+                width: 20px;
+                height: 100%;
                 text-align: center;
                 color: @main-color;
-                font-size: 20px;
-                font-weight: bold;
-                height: 65px;
-                line-height: 65px;
-                border-bottom: 1px solid @main-color;
+                font-size: 10px;
+                //font-weight: bold;
+                //background-color: gray;
+                padding: 20px 0;
+                position: relative;
+                z-index: 1;
+                //height: 65px;
+                //line-height: 65px;
+                //border-bottom: 1px solid @main-color;
+                a {
+                    color: @main-color;
+                }
 
                 span {
+                    display: block;
                     cursor: pointer;
-                    margin: 0 10px;
+                    margin: 3px 0;
+                    font-size: 8px;
+                    //margin: 0 10px;
                 }
             }
 
             .result {
+
                 .row {
                     min-height: 100px;
                     height: auto;
@@ -735,8 +770,7 @@ html, body {
                     }
     
                     .letter {
-                        height: 100px;
-                        line-height: 100px;
+                        padding-top: 24px;
                         text-align: center;
                         font-size: 22px;
                         font-weight: bold;
@@ -805,6 +839,7 @@ html, body {
 
         .info {
             line-height: 24px;
+            margin: 20px 0;
         }
 
         h4 {

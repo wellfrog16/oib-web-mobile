@@ -61,6 +61,8 @@
         'jquery': 'lib/jquery/jquery-1.12.4.min',
         'jquery.cookie': 'lib/jquery/jquery.cookie',
         'jquery.hammer': 'lib/jquery/jquery.hammer',
+        'jquery.pin': 'lib/jquery/jquery.pin',
+        'jquery.nav': 'lib/jquery/jquery.nav',
         'hammer': 'lib/jquery/hammer.min',
 
         'swiper': 'lib/swiper/swiper-3.4.2.jquery.min',
