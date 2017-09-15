@@ -290,19 +290,23 @@ html, body {
 
         // 主文字
         .text {
-            margin-top: 40vh;
+            margin-top: 30px;
             position: relative;
-            top: -205px;
             //text-align: center;
+
+            div {
+                transform-origin: left top;
+            }
         }
 
         ul {
-            margin-bottom: 75px;
+            margin-bottom: 5px;
 
             li{
-                margin-bottom: 15px;
+                margin-bottom: 0px;
                 >img {
-                    margin-right: 25px;
+                    display: block;
+                    margin-bottom: 10px;
                 }
             }
         }
@@ -466,6 +470,7 @@ html, body {
             span {
                 display: inline-block;
                 margin-top: 10px;
+                font-size: 10px;
                 //opacity: 0;
                 //transition: all 0.3s ease-in-out; 
                 color: @main-color;
@@ -556,6 +561,10 @@ html, body {
         }
     }
 
+    .item {
+        margin-bottom: 30px;
+    }
+
     .logo {
         //margin-top: 80px;
         // background-image: url('../asset/img/about/logo.png');
@@ -564,7 +573,7 @@ html, body {
         // background-size: 80%;
         //height: 400px;
         text-align: center;
-        padding: 50px 0;
+        padding: 30px 0 30px 0;
 
         img {
             width: 80%;
@@ -830,7 +839,7 @@ html, body {
     .header-margin();
 
     .list {
-        border-top: 1px solid @main-color;
+        //border-bottom: 1px solid @main-color;
     }
 
     .row {
@@ -850,7 +859,8 @@ html, body {
         }
 
         .map {
-            img {width: 100%;}
+            //img {width: 100%;}
+            height: 60vh;
         }
     }
 }

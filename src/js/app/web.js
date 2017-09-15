@@ -43,7 +43,7 @@ define([
             $('#page-name').text(i18n.nav[page].toUpperCase());
 
             // 设置语言
-            $('#nav-toggle a').on('click', function(){
+            $('.language a').on('click', function(){
                 var lang = $(this).attr('lang');
                 $.cookie('lang', lang, { expires: 365 });
                 //location.href = location.href;
